@@ -1,0 +1,185 @@
+// Font Family
+$body-font: "Roboto";
+
+// Font Weights
+$regular: 400;
+$semibold: 500;
+$bold: 700;
+$ultra: 800;
+
+// Base Font
+$base-font-family: $body-font, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: $regular;
+$base-line-height: 1.6em;
+
+// Colors
+$black: #000000;
+$dark-gray: rgba($black, 0.8);
+$gray: rgba($black, 0.6);
+$light-gray: rgba($black, 0.4);
+$lighter-gray: rgba($black, 0.2);
+$white: #FFFFFF;
+$theme: #1b6930;
+
+// Form Settings
+$max-width: 600px;
+$max-height: 400px;
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(45deg,  rgba(66, 245, 135, 0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+  color: $gray;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    height: 100px;
+}
+
+.header .header-img {
+    background-image: url('./assets/drdoctor-company-logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+
+.form {
+  background: $white;
+  width: $max-width;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba($black, .5);
+  box-sizing: border-box;
+  margin: 150px auto 10px;
+  
+  &-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    label {
+      display: block;
+      margin: 0 0 10px;
+      color: $gray;
+      font-size: 12px;
+      font-weight: $bold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
+
+    input {
+      outline: none;
+      display: block;
+      background: rgba($black, 0.1);
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: $gray;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+
+      &:focus {
+        background-color: $light-gray;
+        color: $white;
+      }
+    }
+
+    input[type="radio"] {
+        display: inline-block;
+        width: 40%;
+      }
+    
+    .vdp-datepicker {
+        width: 100%;
+    }
+
+    button {
+      outline: none;
+      background: $theme;
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      color: $white;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    
+  }
+
+  // Panel
+  &-panel {
+    padding: 60px;
+    box-sizing: border-box;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+          
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+  }
+
+  // Header
+  &-header {
+    margin: 0 0 40px;
+
+    h1 {
+      padding: 4px 0;
+      color: $theme;
+      font-size: 24px;
+      font-weight: $bold;
+      text-transform: uppercase;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.verify {
+    margin-top: 0;
+}
+
+.form-error {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 90%;
+        margin: 50px auto;
+    }
+    .form-group input[type="radio"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px ;
+      }
+}
+
+
