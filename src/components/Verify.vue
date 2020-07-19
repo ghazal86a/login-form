@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="form verify" v-if="picked">
+    <div class="form verify" v-show="picked">
       <div class="form-panel">
         <div class="form-header">
           <h1>Enter your verification code below:</h1>
